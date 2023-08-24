@@ -11,7 +11,8 @@ import static io.restassured.RestAssured.given;
 public class ApiBase {
     final static String BASE_URI = "https://studio-api.softr.io/v1/api";
     final static String API_KEY = "khIbAyJIU5CIuh1oDuBRx1s49";
-    final static String domain = "jere237.softr.app";
+    final static String domain = "erich416.softr.app";
+
 
 
     public static RequestSpecification specification = new RequestSpecBuilder()

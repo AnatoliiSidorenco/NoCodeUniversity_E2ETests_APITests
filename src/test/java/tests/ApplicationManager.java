@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ApplicationManager {
     public WebDriver driver;
-    String BASE_URL = "https://jere237.softr.app/";
+    String BASE_URL = "https://erich416.softr.app";
 
     public void init() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\EducationProg\\SeleniumChromeDriver116\\chromedriver.exe");
