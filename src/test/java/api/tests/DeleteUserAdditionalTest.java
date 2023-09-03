@@ -17,7 +17,7 @@ public class DeleteUserAdditionalTest {
     @Test
     public void twiceDeletedUserTest() {
         validDataUtils = new ValidDataUtils();
-        Response responseOnUserPostRequest = validDataUtils.registerUser(201);
+        Response responseOnUserPostRequest = validDataUtils.registerUser(200);
         ResponseOnCreatedUserDto responseOnCreatedUser = responseOnUserPostRequest.jsonPath().getObject("", ResponseOnCreatedUserDto.class);
 
         String actualEmail = responseOnCreatedUser.getEmail();
@@ -37,7 +37,7 @@ public class DeleteUserAdditionalTest {
     public void deleteUserWithInvalidEmailTest() {
         inValidRequestOnDeleteUserUtils = new InValidRequestOnDeleteUserUtils();
         Response responseOnUserPostRequest =
-                inValidRequestOnDeleteUserUtils.registerUserWithConstEmail(201, bodyWithConstEmail(validEmail_API));
+                inValidRequestOnDeleteUserUtils.registerUserWithConstEmail(200, bodyWithConstEmail(validEmail_API));
         ResponseOnCreatedUserDto responseOnCreatedUser = responseOnUserPostRequest.jsonPath().getObject("", ResponseOnCreatedUserDto.class);
 
         String actualEmail = responseOnCreatedUser.getEmail();

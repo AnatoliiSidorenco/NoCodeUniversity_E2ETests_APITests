@@ -22,7 +22,7 @@ public class SuccessCreatedUserTest {
     @Test
     public void successCreatedUserTest() {
         validDataUtils = new ValidDataUtils();
-        Response responseOnUserPostRequest = validDataUtils.registerUser(201);
+        Response responseOnUserPostRequest = validDataUtils.registerUser(200);
         ResponseOnCreatedUserDto responseOnCreatedUser = responseOnUserPostRequest.jsonPath().getObject("", ResponseOnCreatedUserDto.class);
 
         actualEmailSuccessCreatedUser = responseOnCreatedUser.getEmail();
