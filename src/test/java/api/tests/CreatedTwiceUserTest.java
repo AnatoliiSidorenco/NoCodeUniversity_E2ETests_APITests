@@ -24,7 +24,7 @@ public class CreatedTwiceUserTest {
     @Test
     public void twiceCreatedUserTest() {
         validDataUtils = new ValidDataUtils();
-        Response responseOnUserPostRequest = validDataUtils.registerUser(201);
+        Response responseOnUserPostRequest = validDataUtils.registerUser(200);
         ResponseOnCreatedUserDto responseOnCreatedUser =
                 responseOnUserPostRequest.jsonPath().getObject("", ResponseOnCreatedUserDto.class);
 

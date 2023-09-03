@@ -24,7 +24,7 @@ public class DeleteUserWithInvalidRequestTest {
     public void deleteUserWithGetRequestTest() {
         inValidRequestOnDeleteUserUtils = new InValidRequestOnDeleteUserUtils();
         Response responseOnUserPostRequest =
-                inValidRequestOnDeleteUserUtils.registerUserWithConstEmail(201, bodyWithConstEmail(validEmail_API));
+                inValidRequestOnDeleteUserUtils.registerUserWithConstEmail(200, bodyWithConstEmail(validEmail_API));
         ResponseOnCreatedUserDto responseOnCreatedUser = responseOnUserPostRequest.jsonPath().getObject("", ResponseOnCreatedUserDto.class);
 
         String actualEmail = responseOnCreatedUser.getEmail();
@@ -41,7 +41,7 @@ public class DeleteUserWithInvalidRequestTest {
     public void deleteUserWithPutRequestTest() {
         inValidRequestOnDeleteUserUtils = new InValidRequestOnDeleteUserUtils();
         Response responseOnUserPostRequest =
-                inValidRequestOnDeleteUserUtils.registerUserWithConstEmail(201, bodyWithConstEmail(validEmail_API));
+                inValidRequestOnDeleteUserUtils.registerUserWithConstEmail(200, bodyWithConstEmail(validEmail_API));
         ResponseOnCreatedUserDto responseOnCreatedUser = responseOnUserPostRequest.jsonPath().getObject("", ResponseOnCreatedUserDto.class);
 
         String actualEmail = responseOnCreatedUser.getEmail();
@@ -59,7 +59,7 @@ public class DeleteUserWithInvalidRequestTest {
     public void deleteUserWithPostRequestTest() {
         inValidRequestOnDeleteUserUtils = new InValidRequestOnDeleteUserUtils();
         Response responseOnUserPostRequest =
-                inValidRequestOnDeleteUserUtils.registerUserWithConstEmail(201, bodyWithConstEmail(validEmail_API));
+                inValidRequestOnDeleteUserUtils.registerUserWithConstEmail(200, bodyWithConstEmail(validEmail_API));
         ResponseOnCreatedUserDto responseOnCreatedUser = responseOnUserPostRequest.jsonPath().getObject("", ResponseOnCreatedUserDto.class);
 
 
